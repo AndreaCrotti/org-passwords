@@ -28,7 +28,7 @@
 ;; To enter new passwords, you can use `org-capture' and a template just like
 ;; this:
 
-;;         ("p" "password" entry (file "~/org/secrects.org.gpg")
+;;         ("p" "password" entry (file "~/org/secrets.org.gpg")
 ;;          "* %(org-passwords-template-name)
 ;; :PROPERTIES:
 ;; :username: %(org-passwords-template-username)
