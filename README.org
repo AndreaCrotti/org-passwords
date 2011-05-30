@@ -1,4 +1,4 @@
 Org passwords
 
 An attempt to organize all your secrets directly inside emacs.
-Crypting your text files is highly reccomended.
+Encrypting your text files is highly recommended.
