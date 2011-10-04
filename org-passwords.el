@@ -67,4 +67,8 @@
 (defun org-passwords-template-name ()
   "%^{Account}")
 
-
+;TODO: give a list of possible services to look up first
+(defun org-passwords-get-password (service)
+  "Get the password for a given service"
+  (interactive "M")
+  (org-entry-get (point) service))
