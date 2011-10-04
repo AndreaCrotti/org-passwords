@@ -46,12 +46,17 @@
 (defcustom org-passwords-password-property "password"
   "Property for password"
   :type 'string
-  :group 'org-contacts)
+  :group 'org-passwords)
 
 (defcustom org-passwords-username-property "username"
   "Property for username"
   :type 'string
-  :group 'org-contacts)
+  :group 'org-passwords)
+
+(defcustom org-passwords-files nil
+  "List of org files storing passwords"
+  :type '(repat file)
+  :group 'org-passwords)
 
 (defun org-passwords-template-password ()
   (concat "%^{" org-passwords-password-property "}p"))
@@ -61,3 +66,5 @@
 
 (defun org-passwords-template-name ()
   "%^{Account}")
+
+
