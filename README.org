@@ -2,3 +2,9 @@ Org passwords
 
 An attempt to organize all your secrets directly inside emacs.
 Encrypting your text files is highly recommended.
+
+
+* Possible workflow
+  - automatically fetching password
+  - giving all details for a given entry
+  - export everything on a database or similar format
