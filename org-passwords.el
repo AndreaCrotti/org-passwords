@@ -72,3 +72,5 @@
   "Get the password for a given service"
   (interactive "M")
   (org-entry-get (point) service))
+
+(provide 'org-passwords)
