@@ -58,6 +58,17 @@
   :type '(repat file)
   :group 'org-passwords)
 
+(defcustom org-passwords-password-generator "pwgen"
+  "Command to use to generate random passwords"
+  :type 'string
+  :group 'org-passwords)
+
+;TODO: use a list of options instead
+(defcustom org-passwords-password-generator-flags "-n -c -N1 10"
+  "Flags to pass to the random generator"
+  :type 'string
+  :group 'org-passwords)
+
 (defun org-passwords-template-password ()
   (concat "%^{" org-passwords-password-property "}p"))
 
@@ -72,5 +83,10 @@
   "Get the password for a given service"
   (interactive "M")
   (org-entry-get (point) service))
+
+(defun org-passwords-random-password ()
+  (interactive)
+  (shell-command
+   (format "%s %s" org-passwords-password-generator org-passwords-password-generator-flags)))
 
 (provide 'org-passwords)
